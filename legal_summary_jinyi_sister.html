@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>惡意散布不實資訊事件｜法律爭點與求償整理</title>
+<style>
+  :root{
+    --paper:#EEF0F2;
+    --panel:#FFFFFF;
+    --ink:#1B2A41;
+    --ink-soft:#4A5A70;
+    --line:#D7DCE2;
+    --teal:#2F6F62;
+    --teal-soft:#E2EEEA;
+    --amber:#9C6B23;
+    --amber-soft:#F3E8D6;
+    --radius:4px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;
+    line-height:1.85;
+    font-size:16px;
+  }
+  h1,h2,h3{
+    font-family:"Noto Serif TC","Songti TC",serif;
+    color:var(--ink);
+    line-height:1.5;
+    margin:0 0 .6em;
+  }
+  a{color:var(--teal);}
+
+  .layout{
+    display:flex;
+    max-width:1180px;
+    margin:0 auto;
+    align-items:flex-start;
+  }
+
+  header{
+    background:var(--ink);
+    color:#EDEFF2;
+    padding:56px 24px 44px;
+  }
+  header .inner{
+    max-width:1180px;
+    margin:0 auto;
+  }
+  header .eyebrow{
+    color:#9FB3C8;
+    font-size:.92rem;
+    margin-bottom:14px;
+  }
+  header h1{
+    color:#fff;
+    font-size:clamp(1.6rem,3.4vw,2.4rem);
+    max-width:16em;
+  }
+  header p.lede{
+    color:#C7D0DB;
+    max-width:42em;
+    margin-top:14px;
+    font-size:1rem;
+  }
+
+  nav.toc{
+    width:230px;
+    flex-shrink:0;
+    position:sticky;
+    top:0;
+    align-self:flex-start;
+    padding:40px 20px 40px 24px;
+    max-height:100vh;
+    overflow-y:auto;
+  }
+  nav.toc .label{
+    font-size:.82rem;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+    letter-spacing:.02em;
+  }
+  nav.toc ol{
+    list-style:none;
+    margin:0;padding:0;
+    border-left:2px solid var(--line);
+  }
+  nav.toc li{margin:0;}
+  nav.toc a{
+    display:block;
+    padding:9px 0 9px 16px;
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-size:.92rem;
+    border-left:2px solid transparent;
+    margin-left:-2px;
+  }
+  nav.toc a:hover{color:var(--teal);border-left-color:var(--teal);}
+
+  main{
+    flex:1;
+    min-width:0;
+    padding:40px 24px 80px;
+  }
+
+  section{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px 36px;
+    margin-bottom:22px;
+  }
+  section h2{
+    font-size:1.3rem;
+    padding-bottom:14px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:18px;
+  }
+  section h2 small{
+    display:block;
+    font-family:"Noto Sans TC",sans-serif;
+    font-size:.78rem;
+    color:var(--ink-soft);
+    font-weight:400;
+    margin-top:4px;
+  }
+  section h3{
+    font-size:1.05rem;
+    margin-top:26px;
+  }
+  p{margin:0 0 14px;color:var(--ink);}
+  p.note{color:var(--ink-soft);font-size:.92rem;}
+
+  .law-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+    margin:18px 0;
+  }
+  .law-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:18px 20px;
+    background:#FAFBFC;
+  }
+  .law-card .code{
+    display:inline-block;
+    font-size:.78rem;
+    color:var(--teal);
+    background:var(--teal-soft);
+    padding:2px 9px;
+    border-radius:12px;
+    margin-bottom:10px;
+  }
+  .law-card h4{
+    margin:0 0 8px;
+    font-size:1rem;
+    font-family:"Noto Serif TC",serif;
+  }
+  .law-card p{font-size:.92rem;margin:0;color:var(--ink-soft);}
+
+  .callout{
+    border-left:3px solid var(--amber);
+    background:var(--amber-soft);
+    padding:16px 20px;
+    border-radius:0 var(--radius) var(--radius) 0;
+    margin:18px 0;
+  }
+  .callout p{margin:0;font-size:.94rem;color:#5C4318;}
+  .callout p+p{margin-top:8px;}
+
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin:16px 0;
+    font-size:.94rem;
+  }
+  th,td{
+    text-align:left;
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+  }
+  th{
+    color:var(--ink-soft);
+    font-weight:500;
+    font-size:.86rem;
+    border-bottom:2px solid var(--line);
+  }
+
+  .steps{
+    counter-reset:step;
+    margin:18px 0 0;
+    padding:0;
+    list-style:none;
+  }
+  .steps li{
+    counter-increment:step;
+    position:relative;
+    padding:0 0 26px 44px;
+    border-left:2px solid var(--line);
+    margin-left:15px;
+  }
+  .steps li:last-child{border-left:2px solid transparent;padding-bottom:0;}
+  .steps li::before{
+    content:counter(step);
+    position:absolute;
+    left:-15px;
+    top:0;
+    width:28px;height:28px;
+    border-radius:50%;
+    background:var(--teal);
+    color:#fff;
+    font-size:.86rem;
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Noto Serif TC",serif;
+  }
+  .steps h4{margin:0 0 6px;font-size:1rem;font-family:"Noto Serif TC",serif;}
+  .steps p{margin:0;font-size:.92rem;color:var(--ink-soft);}
+
+  .doc-link{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    background:#FAFBFC;
+    margin-top:10px;
+    text-decoration:none;
+    color:var(--ink-soft);
+    transition:border-color .15s,background .15s;
+  }
+  .doc-link:hover{border-color:var(--teal);background:var(--teal-soft);}
+  .doc-link .icn{
+    width:38px;height:38px;flex-shrink:0;
+    border-radius:6px;
+    background:var(--teal);
+    color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:.8rem;
+    font-family:"Noto Serif TC",serif;
+  }
+  .doc-link .txt{font-size:.9rem;color:var(--ink-soft);}
+  .doc-link .txt strong{display:block;color:var(--ink);font-size:.98rem;margin-bottom:2px;}
+
+  footer{
+    max-width:1180px;
+    margin:0 auto;
+    padding:30px 24px 60px;
+    color:var(--ink-soft);
+    font-size:.86rem;
+  }
+
+  @media (max-width:860px){
+    .layout{flex-direction:column;}
+    nav.toc{
+      position:static;
+      width:100%;
+      max-height:none;
+      padding:20px 20px 4px;
+      overflow-x:auto;
+    }
+    nav.toc ol{
+      border-left:none;
+      display:flex;
+      gap:6px;
+      border-bottom:1px solid var(--line);
+      padding-bottom:12px;
+    }
+    nav.toc li{flex-shrink:0;}
+    nav.toc a{
+      border-left:none;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:7px 14px;
+      margin-left:0;
+      white-space:nowrap;
+    }
+    nav.toc a:hover{border-color:var(--teal);}
+    main{padding:24px 16px 60px;}
+    section{padding:22px 18px;}
+    .law-grid{grid-template-columns:1fr;}
+    header{padding:40px 18px 34px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="eyebrow">事件整理 ／ 個人使用參考</div>
+    <h1>惡意散布不實資訊與個資事件：法律爭點與求償整理</h1>
+    <p class="lede">整理兩名未成年人士向 Cosplay 比賽主辦方散布不實通緝犯資訊、真實身分證字號及過往工作紀錄一事，涉及的刑事責任、民事求償方式，以及對造為未成年人時的特殊處理方式。</p>
+  </div>
+</header>
+
+<div class="layout">
+  <nav class="toc">
+    <div class="label">本頁內容</div>
+    <ol>
+      <li><a href="#overview">事件摘要</a></li>
+      <li><a href="#crimes">可能觸犯的罪名</a></li>
+      <li><a href="#minor">未成年人的特殊處理</a></li>
+      <li><a href="#remedy">求償方式</a></li>
+      <li><a href="#process">建議處理流程</a></li>
+      <li><a href="#docs">相關文件</a></li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <section id="overview">
+      <h2>事件摘要</h2>
+      <p>兩位未成年人士在朋友參加 Cosplay 比賽期間，向主辦方散布「該選手為通緝犯」的不實資訊，並一併提供其真實身分證統一編號及過往在房仲業的工作紀錄。由於該比賽評分機制為主辦方評審、現場觀眾、網路投票三者綜合計算，主辦方因誤信不實資訊而可能影響評分結果，造成選手實際受損。</p>
+      <p class="note">本事件同時涉及「名譽侵害」與「個人資料外洩」兩個層面，且行為人均為未成年人，處理程序上會比一般民事／刑事案件多一道少年保護程序。</p>
+    </section>
+
+    <section id="crimes">
+      <h2>可能觸犯的罪名</h2>
+
+      <div class="law-grid">
+        <div class="law-card">
+          <span class="code">刑法 第310條第2項</span>
+          <h4>加重誹謗罪</h4>
+          <p>以文字、圖畫等方式散布足以毀損他人名譽之不實事實，最重可處 2 年以下有期徒刑。捏造「通緝犯」一事屬具體事實指控，非單純謾罵，較可能構成本罪而非公然侮辱。</p>
+        </div>
+        <div class="law-card">
+          <span class="code">個人資料保護法 第41條</span>
+          <h4>非法利用個人資料罪</h4>
+          <p>意圖損害他人利益，違法蒐集、處理或利用個資（如未經同意公開身分證字號），可處 5 年以下有期徒刑。身分證字號外洩後續被冒用風險高，求償實益通常較誹謗罪更大。</p>
+        </div>
+        <div class="law-card">
+          <span class="code">民法 第184條 / 第195條</span>
+          <h4>民事侵權責任</h4>
+          <p>不論刑事罪名是否成立，只要名譽權、隱私權受侵害，即可請求財產上損害、精神慰撫金，並得請求回復名譽之適當處分（如公開道歉、澄清）。</p>
+        </div>
+        <div class="law-card">
+          <span class="code">民法 第187條</span>
+          <h4>法定代理人連帶責任</h4>
+          <p>行為人為未成年人時，其法定代理人（通常為父母）於監督未盡相當注意時，須與行為人連帶負賠償責任 — 這是未成年案件求償的關鍵依據。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="minor">
+      <h2>未成年人的特殊處理 <small>刑事責任年齡不同，處理程序也不同</small></h2>
+
+      <table>
+        <thead>
+          <tr><th>年齡區間</th><th>刑事責任</th><th>處理程序</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>未滿 14 歲</td>
+            <td>完全不負刑事責任</td>
+            <td>由少年法院依少年事件處理法為保護處分（訓誡、假日生活輔導、保護管束、感化教育等），不留前科</td>
+          </tr>
+          <tr>
+            <td>14 歲以上未滿 18 歲</td>
+            <td>需負刑事責任，但得減輕其刑</td>
+            <td>案件先進入少年法庭程序，而非一般刑事法庭</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>民事求償不受少年保護程序限制：</strong>即使刑事部分因未成年而不起訴或轉入保護處分，民事賠償仍可對行為人本人及其法定代理人（父母）一併提出，不需要等少年保護程序走完才能求償。</p>
+        <p>提起訴訟時，未成年被告須列其法定代理人為法定代理人欄位，訴訟文書送達與程序上也會與一般成年被告不同，建議由律師協助確認管轄與送達方式。</p>
+      </div>
+    </section>
+
+    <section id="remedy">
+      <h2>求償方式</h2>
+      <h3>財產上損害</h3>
+      <p>因比賽名次、獎金或後續合作機會受影響所生的實際損失，需要具體證明因果關係，例如主辦方公開表示因此事件調整評分或名次的紀錄、合作邀約取消證明等。</p>
+      <h3>非財產上損害（精神慰撫金）</h3>
+      <p>因不實指控及個資外洩造成的精神痛苦，可依民法第195條請求慰撫金，金額沒有固定公式，通常參考類似案例的法院判賠標準。</p>
+      <h3>回復名譽之適當處分</h3>
+      <p>可一併請求法院命被告以公開道歉、澄清啟事等方式回復名譽，例如指定刊登版面、平台或字體大小。</p>
+    </section>
+
+    <section id="process">
+      <h2>建議處理流程</h2>
+      <ol class="steps">
+        <li>
+          <h4>保全證據</h4>
+          <p>截圖對話、貼文、傳給主辦方的訊息，並多方備份，避免對方事後刪除；有條件時可考慮公證。</p>
+        </li>
+        <li>
+          <h4>彙整散布對象與內容</h4>
+          <p>蒐集主辦方收到的完整訊息、社群平台上的公開發文，確認散布時間、對象與範圍。</p>
+        </li>
+        <li>
+          <h4>個資外洩另行檢舉</h4>
+          <p>向個資保護相關主管機關檢舉，並保留身分證字號外洩的具體事證，這部分求償空間通常較大。</p>
+        </li>
+        <li>
+          <h4>提出刑事告訴</h4>
+          <p>誹謗罪與個資法違反是否為告訴乃論需個別確認，建議由律師協助遞狀。</p>
+        </li>
+        <li>
+          <h4>提起民事訴訟</h4>
+          <p>對未成年人及其法定代理人一併求償，將名次影響、精神損害都納入請求金額計算。</p>
+        </li>
+        <li>
+          <h4>留意少年保護程序</h4>
+          <p>因涉及未成年人，刑事部分會轉入少年保護程序；民事求償部分可同時進行，不需等保護程序結束。</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="docs">
+      <h2>相關文件</h2>
+      <p>已另外準備一份民事起訴狀範本（.docx），內含【　】標記處供補齊真實姓名、身分證字號、法定代理人資訊、管轄法院與求償金額等細節，實際遞狀前請律師審閱。</p>
+      <a class="doc-link" href="民事起訴狀_範本.docx" download>
+        <div class="icn">DOC</div>
+        <div class="txt">
+          <strong>民事起訴狀_範本.docx</strong>
+          點此下載範本，內含【　】標記處供補齊細節
+        </div>
+      </a>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  本頁內容為一般法律資訊整理；實際個案的法律責任認定、管轄法院及賠償金額，請諮詢執業律師評估。
+</footer>
+
+</body>
+</html>
